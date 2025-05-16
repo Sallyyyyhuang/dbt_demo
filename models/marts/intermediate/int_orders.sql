@@ -9,7 +9,7 @@ orders as (
 payments as (
 
     select * from {{ ref('stg_stripe__payments') }}
-    where payments.payment_status != 'fail'
+    where payment_status != 'fail'
 
 ),
 
